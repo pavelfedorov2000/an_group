@@ -1,0 +1,43 @@
+.tabs {
+    display: flex;
+    @media (max-width: 1024px) {
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 0;
+        }
+    }
+}
+.tab {
+    font-size: 2.4rem;
+    line-height: calc(42 / 24 * 100%);
+    white-space: nowrap;
+    @media (max-width: 1024px) {
+        font-size: 1.8rem;
+        line-height: 3.1rem;
+    }
+    &--active {
+        position: relative;
+        z-index: 1;
+        font-weight: 700;
+        padding-left: 2.7rem;
+        @media (max-width: 1024px) {
+            padding-left: 1.5rem;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            left: 0;
+            z-index: -1;
+            width: 4.6rem;
+            height: 4.6rem;
+            border-radius: 50%;
+            background-color: $accent;
+            @media (max-width: 1024px) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+}

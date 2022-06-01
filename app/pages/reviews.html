@@ -1,0 +1,53 @@
+@@include("blocks/head/head.html", {"title": "Отзывы"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page reviews-page">
+		<div class="container">
+			<a href="#" class="back-link page__back">
+				<svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12.2202 31.1567L5.97021 24.9067L12.2202 18.6567" stroke="#8E9CAA" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M5.97021 24.9067H43.4702" stroke="#8E9CAA" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+				<span>Вернуться</span>
+			</a>
+			<div class="page__top">
+				<h1 class="title">Отзывы</h1>
+			</div>
+
+			<div class="page__body">
+				<div class="reviews-slider swiper reviews-page__slider">
+					<div class="swiper-wrapper">
+						@@include('blocks/reviews-slider/reviews-slider.html')
+						@@include('blocks/reviews-slider/reviews-slider.html')
+						@@include('blocks/reviews-slider/reviews-slider.html')
+					</div>
+					<div class="swiper-button-prev">
+						<svg viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.7744 52.9663L10.1494 42.3413L20.7744 31.7163" stroke="#2094FF" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.1494 42.3413H73.8994" stroke="#2094FF" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</div>
+					<div class="swiper-button-next">
+						<svg viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M64.2256 32.0337L74.8506 42.6587L64.2256 53.2837" stroke="#2094FF" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M74.8506 42.6587L11.1006 42.6587" stroke="#2094FF" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button class="btn reviews-btn" type="button" data-popup="reviews">Оставить отзыв</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include('blocks/pageup/pageup.html')
+	@@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")

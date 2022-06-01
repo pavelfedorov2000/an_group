@@ -1,0 +1,131 @@
+.burger-btn {
+    display: grid;
+    place-items: center;
+    svg {
+        width: 5rem;
+        height: 5rem;
+        @media (max-width: 767px) {
+            width: 3rem;
+            height: 3rem;
+        }
+        path {
+            transition: 0.3s stroke;
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            svg path {
+                stroke: $accent;
+            }
+        }
+    }
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 101;
+    width: 37.8rem;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 25.4rem 5.6rem 17.8rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    transition: 0.3s right;
+    @media (min-width: 768px) {
+        border-radius: 1rem 0 0 1rem;
+    }
+    @media (min-width: 1025px) {
+        justify-content: flex-end;
+    }
+    @media (max-width: 1024px) {
+        padding: 16.4rem 1.5rem 11rem 8.9rem;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    &.active {
+        right: 0;
+    }
+    // .burger-menu__close
+
+    &__close {
+        position: absolute;
+        top: 4.8rem;
+        right: 7.8rem;
+        display: grid;
+        place-items: center;
+        @media (max-width: 1024px) {
+            top: 3.3rem;
+            right: 1.7rem;
+        }
+        svg {
+            width: 5rem;
+            height: 5rem;
+            @media (max-width: 1024px) {
+                width: 3rem;
+                height: 3rem;
+            }
+            path {
+                transition: 0.3s stroke;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    stroke: $accent;
+                }
+            }
+        }
+    }
+
+    // .burger-menu__list
+
+    &__list {
+        display: grid;
+        row-gap: 4rem;
+        list-style-type: none;
+    }
+}
+.menu {
+    // .menu__link
+
+    &__link {
+        @extend %text-32;
+        color: #000;
+        transition: 0.3s color;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+        &.active {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -2.2rem;
+                z-index: -1;
+                width: 4.4rem;
+                height: 4.4rem;
+                border-radius: 50%;
+                background-color: rgba(209, 233, 255, 0.85);
+                @media (max-width: 1024px) {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    left: -1.5rem;
+                    background: rgba(32, 148, 255, 0.85);
+                }
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,308 @@
+@@include("blocks/head/head.html", {"title": "Блог"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page blog-page">
+		<div class="container">
+			<a href="#" class="back-link page__back">
+				<svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12.2202 31.1567L5.97021 24.9067L12.2202 18.6567" stroke="#8E9CAA" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M5.97021 24.9067H43.4702" stroke="#8E9CAA" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+				<span>Вернуться</span>
+			</a>
+			<div class="page__top">
+				<h1 class="title">Блог</h1>
+			</div>
+			<div class="page__body">
+				<div class="page__title">Новости и полезные статьи</div>
+				<div class="page__subtitle">
+					В данном разделе вы можете узнать последние новости и осзнакомиться со статьями, которые помогут вам
+					разобраться с интересующими вопросами.
+				</div>
+				<div class="page__tabs tabs">
+					<button class="tab page__tab tab--active" data-filter="all" type="button">Все статьи</button>
+					<button class="tab page__tab" data-filter="design" type="button">Дизайн</button>
+					<button class="tab page__tab" data-filter="tools" type="button">Инструменты</button>
+					<button class="tab page__tab" data-filter="promotion" type="button">Продвижение</button>
+					<button class="tab page__tab" data-filter="sale" type="button">Продажи</button>
+				</div>
+				<div class="blog-page__grid">
+					<article class="blog-item blog-page__article" data-category="sale">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/01.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/01.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Продажи</span>
+								<p class="blog-item__text">Est cum impedit corrupti voluptates tempore numquam</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="tools">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/02.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/02.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Инструменты</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="promotion">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/03.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/03.jpg"
+										src="assets/images/src.jpg" alt="фото" width="1694" height="853">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Продвижение</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="design">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/04.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/04.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Дизайн</span>
+								<p class="blog-item__text">Est cum impedit corrupti voluptates tempore numquam</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="design">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/05.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/05.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="1043">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Дизайн</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="tools">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/06.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/06.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Инструменты</span>
+								<p class="blog-item__text">
+									Est cum impedit corrupti voluptates tempore numquam
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="sale">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/01.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/01.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Продажи</span>
+								<p class="blog-item__text">Est cum impedit corrupti voluptates tempore numquam</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="tools">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/02.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/02.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Инструменты</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="promotion">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/03.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/03.jpg"
+										src="assets/images/src.jpg" alt="фото" width="1694" height="853">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Продвижение</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="design">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/04.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/04.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Дизайн</span>
+								<p class="blog-item__text">Est cum impedit corrupti voluptates tempore numquam</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="design">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/05.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/05.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="1043">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Дизайн</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="tools">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/06.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/06.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Инструменты</span>
+								<p class="blog-item__text">
+									Est cum impedit corrupti voluptates tempore numquam
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="design">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/05.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/05.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="1043">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Дизайн</span>
+								<p class="blog-item__text">
+									Blanditiis, at maxime aspernatur nobis debitis nostrum reiciendis, omnis ad,
+									molestiae illum eligendi vel.
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+					<article class="blog-item blog-page__article" data-category="tools">
+						<a href="#" class="blog-item__link">
+							<div class="blog-item__bg">
+								<picture>
+									<source type="image/webp" data-srcset="assets/images/blog/06.webp"
+										srcset="assets/images/src.webp">
+									<img class="lazy blog-item__img" data-src="assets/images/blog/06.jpg"
+										src="assets/images/src.jpg" alt="фото" width="810" height="520">
+								</picture>
+							</div>
+							<div class="blog-item__content">
+								<span class="blog-item__category">Инструменты</span>
+								<p class="blog-item__text">
+									Est cum impedit corrupti voluptates tempore numquam
+								</p>
+								<span class="btn blog-item__btn btn--border">Подробнее</span>
+							</div>
+						</a>
+					</article>
+				</div>
+				<div class="blog-page__btn-wrap">
+					<button class="btn blog-page__btn btn--border" type="button">Больше новостей</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include('blocks/pageup/pageup.html')
+	@@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")

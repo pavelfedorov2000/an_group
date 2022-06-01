@@ -1,0 +1,207 @@
+html {
+    box-sizing: border-box;
+    font-size: calc(100vw / 1920 * 10);
+    &.disable-fix {
+        @media (min-width: 1025px) {
+            padding-right: 17px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        font-size: calc(100vw / 500 * 10);
+    }
+
+    @media (max-width: 500px) {
+        font-size: calc(100vw / 375 * 10);
+    }
+}
+
+body {
+    min-width: 320px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f8f8f8;
+    color: #2b2b2b;
+    &._lock {
+        overflow-y: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+    @extend %flex-col;
+    min-height: 100vh;
+}
+
+.page {
+    position: relative;
+    flex: 1 0 auto; // Footer at bottom
+    > * {
+        &:last-child {
+            padding-bottom: 22.7rem;
+            @media (max-width: 1024px) {
+                padding-bottom: 7rem;
+            }
+        }
+    }
+
+    &__back {
+        margin: 7.7rem 0 5rem;
+        @media (max-width: 1024px) {
+            margin: 4.1rem 0 2.7rem;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 8rem;
+        border-bottom: 0.1rem solid $accent;
+        @media (max-width: 1024px) {
+            padding-bottom: 4rem;
+        }
+        /* &:not(:last-child) {
+            margin-bottom: 7.5rem;
+        } */
+    }
+
+    &__top-content {
+        //max-width: 123.9rem + 1.5rem;
+        //padding-right: 1.5rem;
+        /* > * {
+            &:not(:last-child) {
+                margin-bottom: 5.2rem;
+            }
+        } */
+    }
+
+    &__body {
+        padding-top: 9rem;
+        @media (max-width: 1024px) {
+            padding-top: 8rem;
+        }
+    }
+
+    &__title {
+        @extend %text-36;
+        font-weight: 500;
+        color: #5e5e5e;
+        &:not(:last-child) {
+            margin-bottom: 3.3rem;
+        }
+    }
+
+    &__subtitle {
+        @extend %text-28;
+        @media (min-width: 1025px) {
+            max-width: 136.7rem;
+        }
+        @media (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.1rem;
+        }
+        &:not(:last-child) {
+            margin-bottom: 9rem;
+            @media (max-width: 1024px) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__tabs {
+        margin-bottom: 5.4rem;
+    }
+
+    &__tab {
+        &:not(:last-child) {
+            margin-right: 7rem;
+            @media (max-width: 1024px) {
+                margin-right: 2.6rem;
+            }
+        }
+    }
+}
+
+.container {
+    width: $container + $gap * 2;
+    max-width: 100%;
+    padding: 0 $gap;
+    margin: 0 auto;
+    @media (max-width: 1024px) {
+        max-width: 100%;
+    }
+}
+
+.section {
+    padding-top: 15rem;
+
+    @media (max-width: 1024px) {
+        padding-top: 9rem;
+    }
+
+    &--bg {
+        background-color: $dark;
+        color: #f8f8f8;
+    }
+    &__title {
+        margin-bottom: 7rem;
+        @media (max-width: 1024px) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.title {
+    font-size: 6.4rem;
+    line-height: calc(68 / 64 * 100%);
+    font-weight: 500;
+    color: $accent;
+    @media (max-width: 1024px) {
+        font-size: 4.6rem;
+    }
+    @media (max-width: 767px) {
+        font-size: 3rem;
+        line-height: 3.8rem;
+    }
+    &--white {
+        color: #f8f8f8;
+    }
+}
+
+.logo {
+    &__img {
+        width: 11.4rem;
+        height: 4.85rem;
+        @media (max-width: 1024px) {
+            width: 8.6rem;
+            height: 3.658rem;
+        }
+    }
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    border: none;
+
+    table & {
+        max-width: none;
+    }
+}
+
+p {
+    @extend %text-30;
+    @media (max-width: 1024px) {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+}

@@ -1,0 +1,115 @@
+.round-btn {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: $accent;
+    color: #f8f8f8;
+    text-align: center;
+    @extend %flex-center;
+    @extend %text-30;
+    transition: 0.3s all;
+    @media (max-width: 1024px) {
+        width: 11.1rem;
+        height: 11.1rem;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0 0 4rem rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+        color: $accent;
+        filter: drop-shadow(0 0 5.3rem rgba(32, 148, 255, 0.23));
+        box-shadow: 0 0 4rem rgba(255, 255, 255, 0.25);
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: none;
+                filter: none;
+            }
+        }
+    }
+}
+
+.btn {
+    padding: 1.6rem;
+    background-color: $accent;
+    color: #f8f8f8;
+    border-radius: 4.8rem;
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: calc(35 / 26 * 100%);
+    font-weight: 600;
+    transition: 0.3s all;
+    @media (min-width: 1025px) {
+        min-width: 26.8rem;
+    }
+    @media (max-width: 1024px) {
+        font-size: 2.2rem;
+        padding: 1rem;
+    }
+    @media (max-width: 767px) {
+        padding: 1rem 3rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0 0 4rem rgba(255, 255, 255, 0.25);
+        }
+    }
+    &--border {
+        background-color: transparent;
+        border: 0.2rem solid $accent;
+        color: #323232;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+                box-shadow: none;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.back-link {
+    @extend %vertical-align;
+    svg {
+        width: 5rem;
+        height: 5rem;
+        flex-shrink: 0;
+        @media (max-width: 1024px) {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+        path {
+            transition: 0.3s stroke;
+        }
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+    }
+    span {
+        @extend %text-18;
+        color: #8e9caa;
+        transition: 0.3s color;
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            svg path {
+                stroke: $accent;
+            }
+            span {
+                color: $accent;
+            }
+        }
+    }
+}

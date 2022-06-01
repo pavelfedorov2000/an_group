@@ -1,0 +1,105 @@
+.categories-page {
+    &__body {
+        display: grid;
+        gap: 7.5rem;
+        @media (max-width: 1024px) {
+            gap: 3.4rem;
+        }
+        @media (min-width: 1025px) {
+            align-items: center;
+            grid-template-columns: 1fr 20rem;
+            grid-template-areas:
+                'top btn'
+                'list list';
+        }
+    }
+    &__top {
+        @media (min-width: 1025px) {
+            grid-area: top;
+        }
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 5.2rem;
+                @media (max-width: 1024px) {
+                    margin-bottom: 2.7rem;
+                }
+            }
+        }
+    }
+    &__top-text {
+        grid-area: text;
+        font-size: 2.8rem;
+        line-height: calc(37 / 28 * 100%);
+        color: #000;
+        @media (max-width: 1024px) {
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+        }
+    }
+    &__list {
+        @media (min-width: 1025px) {
+            grid-area: list;
+        }
+    }
+    &__round-btn {
+        @media (min-width: 1025px) {
+            grid-area: btn;
+        }
+        @media (max-width: 1024px) {
+            margin-top: 6.3rem - 3.4rem;
+            justify-self: center;
+        }
+    }
+}
+
+.categories-list {
+    list-style-type: none;
+
+    &__item {
+        border-bottom: 0.1rem solid $accent;
+        &:first-child {
+            border-top: 0.1rem solid $accent;
+        }
+    }
+    // .categories-list__link
+
+    &__link {
+        display: block;
+        position: relative;
+        font-size: 3.6rem;
+        line-height: calc(38 / 36 * 100%);
+        color: #5e5e5e;
+        font-weight: 500;
+        padding: 3.5rem 0;
+        transition: 0.3s color;
+        @media (max-width: 1024px) {
+            padding: 3.2rem 0;
+            font-size: 1.8rem;
+            line-height: 1.9rem;
+            color: #ccc;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            right: 0;
+            width: 9.8rem;
+            height: 7rem;
+            background-image: url(../images/icons/arrow.svg);
+            @extend %bg-contain;
+            transition: 0.3s transform;
+            @media (max-width: 1024px) {
+                width: 4.9rem;
+                height: 3.5rem;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+                &:before {
+                    transform: translate(1rem, -50%);
+                }
+            }
+        }
+    }
+}

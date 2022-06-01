@@ -1,0 +1,37 @@
+.pageup {
+    @extend %vertical-align;
+    position: fixed;
+    bottom: 10rem;
+    right: 8rem;
+    @media (max-width: 1024px) {
+        bottom: 3rem;
+        right: 2rem;
+        align-items: flex-end;
+    }
+    span {
+        @extend %text-18;
+        color: #8e9caa;
+        transition: 0.3s all;
+        @media (max-width: 1024px) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
+    svg {
+        width: 3.2rem;
+        height: 3.2rem;
+        path {
+            transition: 0.3s stroke;
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            span {
+                color: $accent;
+            }
+            svg path {
+                stroke: $accent;
+            }
+        }
+    }
+}

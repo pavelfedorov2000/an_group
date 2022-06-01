@@ -1,0 +1,173 @@
+.reviews-slider {
+    padding: 0 8.5rem + 6.4rem;
+    @media (max-width: 1024px) {
+        padding: 0 3.2rem + 1.8rem;
+    }
+    @media (min-width: 1025px) {
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: -11.3rem;
+            bottom: -7.6rem;
+            z-index: 2;
+            width: 14.3rem;
+            background: linear-gradient(90deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
+        }
+        &::before {
+            left: 8.5rem + 6.4rem;
+            @media (max-width: 1024px) {
+                left: 0;
+            }
+        }
+        &::after {
+            right: 8.5rem + 6.4rem;
+            transform: rotate(-180deg);
+            @media (max-width: 1024px) {
+                right: 0;
+            }
+        }
+    }
+    &__item {
+        box-sizing: border-box;
+        @media (min-width: 1025px) {
+            width: 71.6rem;
+            margin: 0 calc(10.5rem / 2);
+        }
+    }
+    .swiper-button {
+        &-next,
+        &-prev {
+            @extend %vertical-align;
+            width: 8.5rem + 6.4rem;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            background-color: #f8f8f8;
+            @media (max-width: 1024px) {
+                width: 3.2rem + 1.8rem;
+            }
+            svg {
+                width: 8.5rem;
+                height: 8.5rem;
+                @media (max-width: 1024px) {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
+            }
+        }
+        &-prev {
+            left: 0;
+            //left: -8.5rem - 6.4rem;
+            @media (max-width: 1024px) {
+                //left: -3.2rem - 1.8rem;
+            }
+        }
+        &-next {
+            right: 0;
+            //right: -8.5rem - 6.4rem;
+            @media (max-width: 1024px) {
+                //right: -3.2rem - 1.8rem;
+            }
+        }
+    }
+}
+
+.reviews-card {
+    background-color: #fff;
+    border: 0.1rem solid #2094ff;
+    border-radius: 0.5rem;
+    display: grid;
+    row-gap: 5.3rem;
+    padding: 7rem 7.5rem;
+    @media (max-width: 1024px) {
+        padding: 2rem 2rem 4rem;
+        row-gap: 3.4rem;
+    }
+    // .reviews-card__wrap
+
+    &__wrap {
+        @extend %vertical-align;
+    }
+
+    // .reviews-card__img
+
+    &__img {
+        width: 11.9rem;
+        height: 11.9rem;
+        flex-shrink: 0;
+        margin-right: 3rem;
+        position: relative;
+        z-index: 1;
+        @media (max-width: 1024px) {
+            width: 6.3rem;
+            height: 6.3rem;
+            margin-right: 1.5rem;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -1.6rem;
+            left: -1.3rem;
+            z-index: -1;
+            width: 11.9rem;
+            height: 11.9rem;
+            border-radius: 50%;
+            background-color: rgba(32, 148, 255, 0.46);
+            @media (max-width: 1024px) {
+                width: 6.3rem;
+                height: 6.3rem;
+                top: -0.8rem;
+                left: -0.7rem;
+            }
+        }
+        img {
+            border-radius: 50%;
+            @extend %cover;
+        }
+    }
+
+    // .reviews-card__name
+
+    &__name {
+        font-size: 2.6rem;
+        line-height: calc(35 / 26 * 100%);
+        font-weight: 600;
+        color: #000;
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+    }
+
+    // .reviews-card__text
+
+    &__text {
+        @extend %text-22;
+        line-height: 2.9rem;
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
+}
+
+.reviews-btn {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    @media (max-width: 1024px) {
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+    }
+}
+
+.reviews-page {
+    &__slider {
+        &:not(:last-child) {
+            margin-bottom: 11.3rem;
+            @media (max-width: 1024px) {
+                margin-bottom: 4.8rem;
+            }
+        }
+    }
+}
