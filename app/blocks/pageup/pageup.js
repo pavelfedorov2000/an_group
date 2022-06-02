@@ -1,7 +1,13 @@
-app.yourScriptName = {
-  name: 'yourScriptName',
+app.pageup = {
+  name: 'pageup',
   description: 'your script description',
   init() {
-    // your code
+    const pageUp = document.querySelector('.pageup');
+    pageUp.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
   },
 };

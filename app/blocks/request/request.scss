@@ -1,117 +1,120 @@
 .request {
-    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% calc(122 / 674 * 100%));
-    padding: 17.2rem 0 10rem;
-    @media (max-width: 1024px) {
-        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% calc(34 / 674 * 100%));
-        padding: 7.5rem 0 5.5rem;
-    }
+	clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% calc(122 / 674 * 100%));
+	padding: 17.2rem 0 10rem;
 
-    &__title {
-        font-size: 6.2rem;
-        line-height: calc(66 / 62 * 100%);
-    }
-    // .request__inner
+	@media (max-width: 1024px) {
+		clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% calc(34 / 674 * 100%));
+		padding: 7.5rem 0 5.5rem;
+	}
 
-    &__inner {
-        @media (min-width: 1025px) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        @media (max-width: 1024px) {
-            display: grid;
-            grid-gap: 3.2rem;
-        }
-    }
+	&__title {
+		font-size: 6.2rem;
+		line-height: calc(66 / 62 * 100%);
 
-    // .request__content
+		@media(max-width: 767px) {
+			font-size: 3rem;
+			line-height: 4.8rem;
+		}
+	}
 
-    &__content {
-        > * {
-            &:not(:last-child) {
-                margin-bottom: 8.5rem;
-                @media (max-width: 1024px) {
-                    margin-bottom: 3rem;
-                }
-            }
-        }
-    }
+	// .request__inner
 
-    // .request__subtitle
+	&__inner {
+		@media (min-width: 1025px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 
-    &__subtitle {
-        @extend %text-30;
-    }
+		@media (max-width: 1024px) {
+			display: grid;
+			grid-gap: 3.2rem;
+		}
+	}
 
-    // .request__form
+	// .request__content
 
-    &__form {
-        @media (min-width: 1025px) {
-            width: 46.7rem;
-        }
-    }
+	&__content {
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 8.5rem;
 
-    // .request__form-inputs
+				@media (max-width: 1024px) {
+					margin-bottom: 3rem;
+				}
+			}
+		}
+	}
 
-    &__form-inputs {
-        display: grid;
-        grid-gap: 3.3rem;
-        @media (max-width: 1024px) {
-            grid-gap: 2.8rem;
-        }
-        &:not(:last-child) {
-            margin-bottom: 2.5rem;
-            @media (max-width: 1024px) {
-                margin-bottom: 2rem;
-            }
-        }
-    }
+	// .request__subtitle
 
-    // .request__form-input
+	&__subtitle {
+		@extend %text-30;
+	}
 
-    &__form-input {
-        padding-bottom: 0.4rem;
-        border-bottom-color: #f8f8f8;
-        &:active,
-        &:focus {
-            border-bottom-color: $accent;
-        }
-    }
+	// .request__form
 
-    // .request__form-agree
+	&__form {
+		@media (min-width: 1025px) {
+			width: 46.7rem;
+		}
+	}
 
-    &__form-agree {
-        @extend %vertical-align;
-        cursor: pointer;
-        &:not(:last-child) {
-            margin-bottom: 5.5rem;
-            @media (max-width: 1024px) {
-                margin-bottom: 3.4rem;
-            }
-        }
-    }
+	// .request__form-inputs
 
-    // .request__form-btn
+	&__form-inputs {
+		display: grid;
+		grid-gap: 3.3rem;
 
-    &__form-btn {
-        margin: 0 auto;
-        @media (max-width: 1024px) {
-            background-color: #f8f8f8;
-            color: $accent;
-            box-shadow: 0 0 4rem rgba(255, 255, 255, 0.2);
-        }
-    }
-}
+		@media (max-width: 1024px) {
+			grid-gap: 2.8rem;
+		}
 
-.input {
-    @extend %text-20;
-    font-weight: 300;
-    color: #f8f8f8;
-    @media (max-width: 1024px) {
-        font-size: 1.8rem;
-        line-height: 2.1rem;
-    }
-    &::placeholder {
-        color: #f8f8f8;
-    }
+		&:not(:last-child) {
+			margin-bottom: 2.5rem;
+
+			@media (max-width: 1024px) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	// .request__form-input
+
+	&__form-input {
+		padding-bottom: 0.4rem;
+		border-bottom-color: #f8f8f8;
+
+		&:active,
+		&:focus {
+			border-bottom-color: $accent;
+		}
+	}
+
+	// .request__form-agree
+
+	&__form-agree {
+		@extend %vertical-align;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-bottom: 5.5rem;
+
+			@media (max-width: 1024px) {
+				margin-bottom: 3.4rem;
+			}
+		}
+	}
+
+	// .request__form-btn
+
+	&__form-btn {
+		margin: 0 auto;
+
+		@media (max-width: 1024px) {
+			background-color: #f8f8f8;
+			color: $accent;
+			box-shadow: 0 0 4rem rgba(255, 255, 255, 0.2);
+		}
+	}
 }

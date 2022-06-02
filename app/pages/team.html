@@ -1,0 +1,53 @@
+@@include("blocks/head/head.html", {"title": "Услуги"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page team-page">
+		<div class="container">
+			<a href="#" class="back-link page__back">
+				<svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12.2202 31.1567L5.97021 24.9067L12.2202 18.6567" stroke="#8E9CAA" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M5.97021 24.9067H43.4702" stroke="#8E9CAA" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+				<span>Вернуться</span>
+			</a>
+			<div class="page__top">
+				<h1 class="title">Блог</h1>
+			</div>
+			<section class="about">
+				<h2 class="section-title about__title">О нас</h2>
+				<div class="about__content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus repellat laborum cupiditate
+						soluta cum
+						voluptatum sint, nesciunt nihil delectus odio. Facilis, consequatur molestiae! Est cum impedit
+						corrupti
+						voluptates tempore numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+						quasi
+						adipisci error ipsum aperiam nostrum perferendis. Blanditiis, at maxime aspernatur nobis debitis
+						nostrum
+						reiciendis, omnis ad, molestiae illum eligendi vel.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus repellat laborum cupiditate
+						soluta cum
+						voluptatum sint, nesciunt nihil delectus odio. Facilis, consequatur molestiae! Est cum impedit
+						corrupti
+						voluptates tempore numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+				</div>
+			</section>
+			<section class="team-page-section">
+				<div class="container">
+					<h2 class="section-title team-page-section__title">Наша команда</h2>
+					@@include('blocks/team-page-slider/team-page-slider.html')
+				</div>
+			</section>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include('blocks/pageup/pageup.html')
+</div>
+@@include("blocks/link/link.html")

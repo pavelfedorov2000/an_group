@@ -1,0 +1,20 @@
+@@include("blocks/head/head.html", {"title": "Страница не найдена"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page not-found-page">
+		<div class="container">
+			<div class="not-found-page__body">
+				<div class="not-found-page__round">
+					<span class="not-found-page__num">404</span>
+					<h1 class="not-found-page__title">Страница не&nbsp;найдена</h1>
+				</div>
+				<p class="not-found-page__text">Возможно, запрашиваемая Вами страница была переименована или удалена.
+				</p>
+				<a href="#" class="btn not-found-page__btn btn--border">Вернуться на главную</a>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+</div>
+@@include("blocks/link/link.html")

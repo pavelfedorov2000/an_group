@@ -1,3 +1,134 @@
-.not-found {
-  // your code
+.not-found-page {
+
+	padding: 13.5rem 0;
+
+	@media(max-width: 1024px) {
+		padding: 8.8rem 0 8.2rem;
+	}
+
+	// .not-found-page__body
+
+	&__body {
+		position: relative;
+		display: grid;
+		align-content: center;
+		justify-items: center;
+		text-align: center;
+		row-gap: 9.8rem;
+
+		@media(max-width: 1024px) {
+			row-gap: 4.6rem;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -3rem;
+			@extend %pos-center-x;
+			width: 146rem;
+			height: 65.1rem;
+			background-image: url(../images/404-bubbles.svg);
+			@extend %bg-contain;
+
+			@media(max-width: 767px) {
+				top: -5.8rem;
+				width: calc(100vw - 2rem * 2);
+				height: 30.4rem;
+				background-image: url(../images/404-bubbles-mob.svg);
+			}
+		}
+	}
+
+	// .not-found-page__round
+
+	&__round {
+		display: grid;
+		place-items: center;
+		align-content: center;
+		row-gap: 4.4rem;
+		width: 59.3rem;
+		height: 59.3rem;
+		border-radius: 50%;
+		background-color: rgba(32, 148, 255, 0.83);
+		color: #fff;
+		text-transform: uppercase;
+
+		@media(max-width: 1024px) {
+			width: 35rem;
+			height: 35rem;
+			margin-bottom: 7.8rem - 4.6rem;
+		}
+
+		@media(max-width: 767px) {
+			width: 20.8rem;
+			height: 20.8rem;
+			row-gap: 1.5rem;
+		}
+	}
+
+	// .not-found-page__num
+
+	&__num {
+		@extend %terminator;
+		font-size: 12rem;
+		line-height: calc(132 / 120 * 100%);
+
+		@media(max-width: 1024px) {
+			font-size: 6rem;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 4rem;
+			line-height: 4.4rem;
+		}
+	}
+
+	// .not-found-page__title
+
+	&__title {
+		@extend %terminator;
+		font-size: 4rem;
+		line-height: calc(44 / 40 * 100%);
+
+		@media(max-width: 1024px) {
+			font-size: 2.6rem;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 1.4rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	// .not-found-page__text
+
+	&__text {
+		@extend %text-32;
+		color: #000;
+
+		@media(max-width: 1024px) {
+			font-size: 2.4rem;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+		}
+	}
+
+	// .not-found-page__btn
+
+	&__btn {
+		padding: 2.5rem 7.2rem;
+
+		@media(max-width: 1024px) {
+			padding: 2rem 5rem;
+		}
+
+		@media(max-width: 767px) {
+			padding: 1.2rem 3rem;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+	}
 }

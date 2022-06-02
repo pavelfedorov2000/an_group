@@ -1,3 +1,46 @@
 .team-page-slider {
-  // your code
+
+	// .team-page-slider__item
+
+	&__item {}
+
+	// .team-page-slider__item-img
+
+	&__item-img {
+		height: 58.1rem;
+
+		img {
+			@extend %cover;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 4.8rem;
+		}
+	}
+
+	// .team-page-slider__item-name
+
+	&__item-name {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1.4rem;
+		}
+	}
+
+	// .team-page-slider__item-position
+
+	&__item-position {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 3.5rem;
+		}
+	}
+
+	// .team-page-slider__item-text
+
+	&__item-text {
+		@extend %text-22;
+	}
 }
